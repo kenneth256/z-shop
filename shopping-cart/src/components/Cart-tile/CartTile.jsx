@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useDispatch } from 'react-redux'
 import { removeFromCart } from '../store/slice/cart-slice'
 

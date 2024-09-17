@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CircleLoader } from "react-spinners";
 import Product from "./Product/Product";
 
@@ -21,7 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  });
   return (
     <div>
       {loading ? (

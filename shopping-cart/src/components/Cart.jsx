@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartTile from "./Cart-tile/CartTile";
@@ -19,7 +19,7 @@ function Cart() {
             <div className="flex flex-col justify-center items-center p-3">
                 {
                     cart.map(item => {
-                        console.log(item);
+                
                     return <CartTile productItem={item}/>})
                 }
 
