@@ -1,8 +1,4 @@
 [build]
+  base = "" # Leave as an empty string if the build command runs from the root
+  publish = "build" # The directory where your build output is located
   command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
