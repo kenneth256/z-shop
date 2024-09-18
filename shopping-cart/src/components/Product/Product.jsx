@@ -24,11 +24,12 @@ function handleRemoveFromCart(){
         <img src={productItem.image} alt={productItem?.image} className="w-full h-full object-cover"/>
 
       </div>
-      <div>
-        <h1 className="w-40 truncate mt-3 text-gray font-bold text-lg">{productItem?.title}</h1>
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="w-40 truncate mt-1 text-gray font-bold text-lg">{productItem?.title}</h1>
+        <h1 className="w-40 truncate mt-1 text-gray font-bold text-lg">Price: {productItem?.price}</h1>
       </div>
       <div className="flex items-center justify-center w-full mt-5">
-        <button onClick={cart.some(item=> item.id === productItem.id) ? handleRemoveFromCart : handleAddToCart} className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
+        <button onClick={cart.some(item=> item.id === productItem.id) ? handleRemoveFromCart : handleAddToCart} className="bg-red-950 text-white border-2 rounded-lg font-bold p-2">
             {
                 cart.some(item=> item.id === productItem.id ) ? 'Remove from cart' :  'Add to cart'
             }
